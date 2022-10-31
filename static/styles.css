@@ -1,0 +1,13 @@
+
+@media (min-width: 768px){
+    .margen{
+        margin-top: 10rem !important;
+    }
+
+}
+@media (max-width: 900px){
+    .margen{
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+    }
+}

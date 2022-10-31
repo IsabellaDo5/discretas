@@ -10,6 +10,8 @@ from sqlalchemy import create_engine
 
 app = Flask(__name__)
 
+if __name__ =='__main__':  
+    app.run(debug = True)  
 # Check for environment variable
 if not os.getenv("DATABASE_URL"):
     raise RuntimeError("DATABASE_URL is not set")
@@ -38,10 +40,40 @@ def login_required(f):
 
 @app.route("/", methods=["GET","POST"])
 def inicio():
-    return render_template("layout.html")
+    try:
+        a = session["user_id"]
+    except:
+        return render_template("index.html")
+    return render_template("index.html")
 
-@app.route("/register", methods=["GET","POST"])
+@app.route("/login", methods=["GET","POST"])
 def login():
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+
+        user = db.execute("SELECT * FROM users WHERE username = :username", {"username":username}).fetchall()
+        
+        if not username or not password:
+            flash('Debe rellenar todos los campos')
+            return render_template("login.html")
+        if len(user) == 0:
+            Error = 'Invalid credentials'
+            flash('Nombre de usuario o contraseña inválidos')
+            return render_template("login.html")
+        if not check_password_hash(user[0]["password"], password):
+            Error = 'Invalid credentials'
+            flash('Nombre de usuario o contraseña inválidos')
+            return render_template("login.html")
+
+        session["user_id"] = user[0]["id"]
+
+        id_user = session["user_id"]
+        return redirect("/")
+
+    return render_template("login.html")
+@app.route("/register", methods=["GET","POST"])
+def register():
     if request.method == "POST":
 
         username = request.form.get("username")
@@ -74,3 +106,9 @@ def login():
 
         return redirect("/")
     return render_template("registro.html")
+
+@app.route("/logout")
+@login_required
+def logout():
+    session.clear()
+    return redirect("/")
