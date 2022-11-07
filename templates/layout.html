@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link href="{{ url_for('static',filename='styles.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=AveriaLibre">
 </head>
 
 <body>
@@ -36,6 +37,15 @@
             {% endif %}
 
             {% if session.user_id %}
+            <!--Aqui puse el buscador ya que pensaba que solamente los usuarios logeados iban a poder usarlo
+            , sino es asi ahi lo pongo mas tarde a como estaba, me duele el culo ya-->
+            <li class="nav-item">
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar un tema, libro" aria-label="Search"
+                  name="buscar">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="/logout">Cerrar sesión</a>
             </li>
@@ -55,16 +65,24 @@
               </ul>
             </li>
           </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar un tema, libro" aria-label="Search"
-              name="buscar">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
-          </form>
+
         </div>
       </div>
     </div>
   </nav>
   <br>
+  <!--Aqui se le muestra el mensaje de flask, lo puse aqui para evitar recargar el login y register, Tambien
+  esta la opcion de eliminar el mensaje, ya que cuando parecia quedaba permanente-->
+  {%for message in get_flashed_messages()%}
+  <div class="alert alert-danger d-flex align-items-center" role="alert" style="margin-top: 50px;">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+    <strong>{{ message }}</strong>
+
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {%endfor%}
   <main class="margen">
     {% block main %}{% endblock %}
   </main>

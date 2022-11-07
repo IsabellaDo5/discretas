@@ -1,22 +1,174 @@
 .k {
     width: 70%;
     margin: 15% auto !important;
- 
+
 }
-@media (max-width: 400px){
-    .margen{
+/*Aqui comienza todo el css, yo me voy a encargar de hacerlo responsive
+Ya que es un despelote*/
+:root {
+    --login-bg: #f8f3ff;
+    --title-bg: #9089cc;
+    --button-bg: #607EAA;
+    --light-pink: #343846;
+    --image-bg: #eadbff;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to top, #EEF1FF 0%, #AAC4FF 100%);
+}
+
+
+.login-container {
+    height: 600px;
+    width: 60em;
+    margin: 6em auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    outline-style: groove;
+    outline-color: white;
+
+}
+.login-container2 {
+    height: 800px;
+    width: 60em;
+    margin: 6em auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    outline-style: groove;
+    outline-color: white;
+    margin-top: 4%;
+
+
+}
+
+.login-info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+}
+
+
+.image-container {
+    padding: -9rem;
+    width: 50%;
+    background-color: var(--image-bg);
+    box-sizing: border-box;
+}
+
+.title {
+    margin: 20px;
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--title-bg);
+}
+
+.texto{
+    margin: 20px;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--title-bg);
+}
+.texto2{
+    margin: 20px;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--title-bg);
+}
+
+.login-info-container>p {
+    font-size: 1.25em;
+    margin-top: 1.5em;
+}
+
+.inputs-container {
+    height: 76%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.inputs-container2 {
+    height: 76%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1%;
+   
+}
+
+
+.input,
+.btn {
+    width: 90%;
+    height: 3.125rem;
+    font-size: 1em;
+}
+
+.input {
+    padding-left: 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    border-style: groove;
+}
+
+.input:hover {
+    border: 1px solid var(--button-bg);
+}
+
+
+.btn {
+    width: 80%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    cursor: pointer;
+}
+
+.inputs-container p {
+    margin: 0;
+}
+/*AQUI TERMINA*/
+@media (max-width: 400px) {
+    .margen {
         margin-top: 70px !important;
         margin-left: 20px !important;
         margin-right: 20px !important;
     }
+
     .k {
         width: 90%;
         margin: 30% auto !important;
     }
 
 }
-@media (max-width: 900px){
-    .margen{
+
+@media (max-width: 900px) {
+    .margen {
         margin-top: 50px;
         margin-left: 20px !important;
         margin-right: 20px !important;
@@ -24,14 +176,15 @@
 
 }
 
-@media (min-width: 1024px){
-    .margen{
+@media (min-width: 1024px) {
+    .margen {
         margin-top: 50px;
         margin-left: 20px !important;
         margin-right: 20px !important;
     }
+
     .k {
         width: 30%;
-     
+
     }
 }
