@@ -9,6 +9,8 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy import create_engine
 from flask import send_from_directory
 
+
+
 app = Flask(__name__)
 
 if __name__ =='__main__':  
@@ -32,6 +34,7 @@ Session(app)
 # Set up database
 engine = create_engine(os.getenv("DATABASE_URL"))
 db = scoped_session(sessionmaker(bind=engine))
+
 
 #La ruta para mandar imagenes
 @app.route('/favicon.ico')
@@ -71,6 +74,7 @@ def login():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
+        
 
         user = db.execute("SELECT * FROM users WHERE username = :username", {"username":username}).fetchall()
         
@@ -89,7 +93,8 @@ def login():
         session["user_id"] = user[0]["id"]
         
         id_user = session["user_id"]
-        return render_template("index.html", user_image=pic1, nombre = username)
+        return render_template("index.html",user_image=pic1, nombre = username)
+        
     else:    
         return render_template("login.html",user_image=pic1)
 
@@ -128,6 +133,11 @@ def register():
             db.commit()
         return redirect("/")
     return render_template("registro.html", user1_image=pic1)
+
+@app.route("/septimo", methods=["GET","POST"])
+@login_required
+def septimo():
+    return render_template("septimo.html")
 
 @app.route("/logout")
 @login_required

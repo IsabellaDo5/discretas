@@ -3,6 +3,7 @@
     margin: 15% auto !important;
 
 }
+
 /*Aqui comienza todo el css, yo me voy a encargar de hacerlo responsive
 Ya que es un despelote*/
 
@@ -34,6 +35,7 @@ body {
     outline-color: white;
 
 }
+
 .login-container2 {
     height: 800px;
     width: 60em;
@@ -76,7 +78,7 @@ body {
     color: var(--title-bg);
 }
 
-.texto{
+.texto {
     margin: 20px;
     text-transform: capitalize;
     font-size: 25px;
@@ -84,7 +86,8 @@ body {
     letter-spacing: 1px;
     color: var(--title-bg);
 }
-.texto2{
+
+.texto2 {
     margin: 20px;
     text-transform: capitalize;
     font-size: 25px;
@@ -106,6 +109,7 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+
 .inputs-container2 {
     height: 76%;
     width: 100%;
@@ -114,7 +118,7 @@ body {
     justify-content: space-around;
     align-items: center;
     margin-top: 1%;
-   
+
 }
 
 
@@ -154,28 +158,31 @@ body {
 .inputs-container p {
     margin: 0;
 }
+
 /*AQUI TERMINA*/
 
 /* Aqui empieza la decoracion super moledora del index*/
 
 
 /*Especificamente aqui podes cambiar los colores de la presentacion del index */
-header{
-    
-    background: -webkit-linear-gradient(to right,  #ee1515,   #2e2c2c);  
-    background: linear-gradient(to right,  #dc1414,#1a1c1b); 
+header {
+
+    background: -webkit-linear-gradient(to right, #ee1515, #2e2c2c);
+    background: linear-gradient(to right, #dc1414, #1a1c1b);
     height: 55%;
     padding: 60px;
     width: 105%;
-   
+
 }
-.moverxd{
+
+.moverxd {
     position: absolute;
     right: -0.01%;
     top: 55px;
 }
-.container6{
-    
+
+.container6 {
+
     width: 95%;
     max-width: 1200px;
     display: flex;
@@ -184,26 +191,26 @@ header{
     margin: auto;
 }
 
-.textos{
+.textos {
     width: 50%;
-    color:#fff;
+    color: #fff;
     margin-right: 50%;
 }
 
-.textos h1{
-    font-size:80px;
+.textos h1 {
+    font-size: 80px;
     animation: moverDerecha 1s ease-in;
 
 }
 
-.textos h2{
-    font-size:30px;
+.textos h2 {
+    font-size: 30px;
     animation: moverIzquierda 1s ease-in;
 }
 
-.textos a{
+.textos a {
     display: inline-block;
-    color:#fff;
+    color: #fff;
     font-weight: 300;
     text-decoration: none;
     margin-top: 30px;
@@ -215,14 +222,16 @@ header{
     animation: arriba 1s ease-in;
 
 }
-.title h2{
-	color: #041C32;
-	font-size: 75px;
-	width: 1130px;
-	margin: 30px auto;
-	text-align: center;
+
+.title h2 {
+    color: #041C32;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
 }
-.fotico{
+
+.fotico {
     position: absolute;
     height: 500px;
     object-fit: cover;
@@ -232,16 +241,17 @@ header{
 }
 
 /*Especificamente aqui podes cambiar los colores que unen el primer div con este, esta es la parte ondulada de abajo */
-.wave{
+.wave {
     position: absolute;
     right: -0.01%;
     top: 430px;
     height: 100px;
     width: 100%;
-    background: #dd2522;  
-    background: -webkit-linear-gradient(to right, #d8240c, #151616);  
+    background: #dd2522;
+    background: -webkit-linear-gradient(to right, #d8240c, #151616);
     background: linear-gradient(to right, #791b1b, #020202);
 }
+
 .title {
     margin: 20px;
     text-transform: capitalize;
@@ -252,77 +262,84 @@ header{
 }
 
 /*Especificamente aqui estan las card */
-.box{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 400px;
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
 }
 
 /*Especificamente aqui podes cambiar el color de la card*/
-.card{
-	height: 365px;
-	width: 335px;
-	padding: 20px 35px;
-	background:#f5ff8cf4;
-	border-radius: 20px;
-	margin: 15px;
-	position: relative;
-	overflow: hidden;
-	text-align: center;
-    left:15px;
+.card {
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px;
+    background: #f5ff8cf4;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    left: 15px;
 
 }
-.card i{
-	font-size: 50px;
-	display: block;
-	text-align: center;
-	margin: 25px 0px;
-	color: #6998AB;
+
+.card i {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: #6998AB;
 
 }
-.usuario{
+
+.usuario {
     width: 25%;
 }
-.pop{
+
+.pop {
     width: 60%;
 }
-h5{
-	color: white;
-	font-size: 23px;
-	margin-bottom: 15px;
+
+h5 {
+    color: white;
+    font-size: 23px;
+    margin-bottom: 15px;
 }
-.pra p{
-	color: #fcfc;
-	font-size: 16px;
-	line-height: 27px;
-	margin-bottom: 25px;
+
+.pra p {
+    color: #fcfc;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
 }
 
 /*Especificamente aqui podes cambiar los botones de las card */
-.card .button{
-	background-color:#f9004d;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 9px 22px;
-	border-radius: 30px;
-	transition: .4s;
+.card .button {
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: .4s;
 }
-.card .button:hover{
-	background-color: transparent;
-	border: 2px solid #f9004d;
-	cursor: pointer;
+
+.card .button:hover {
+    background-color: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;
 }
 
 
-.libro{
+.libro {
     position: absolute;
     top: 67%;
     width: 103%;
     right: -0.01%;
 }
+
 /*POPUP BELLO PRECIOSO*/
 
 
@@ -367,41 +384,141 @@ h5{
     line-height: 25px;
 }
 
+/* Tercera seccion */
+
+.btn{
+	display: inline-block;
+	padding: 16px 10px;
+	font-size: var(--p-font);
+	font-weight: 700;
+	background:#9089cc;
+	color: var(--bg-color);
+	border-radius: 30px;
+	transition: all .40s ease;
+    width: 43%;
+}
+.btn:hover{
+	transform: scale(0.9) translateY(-5px);
+}
+.about {
+    background: url(/static/pics/aboutbg.png);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+}
+
+.about-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: var(--p-font);
+    color: var(--second-color);
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.about-text h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about-text h5 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.contact {
+    padding: 60px 13%;
+    background: white;
+}
+
+.main-contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+}
+
+.contact-content img {
+    height: auto;
+    width: 160px;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.contact-content li {
+    margin-bottom: 18px;
+}
+
+.contact-content li a {
+    display: block;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 15px;
+    transition: all .40s ease;
+}
+
+.contact-content li a:hover {
+    transform: translateX(10px);
+    color: var(--main-color);
+}
+
+.last-text p {
+    text-align: center;
+    padding: 18px;
+    background-color: white;
+    color: var(--second-color);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
 
 /* NO TOUCHHHHHHHH */
-
 /*Especificamente aqui NO TOCAR*/
-@keyframes moverIzquierda{
-    0%{
+@keyframes moverIzquierda {
+    0% {
         opacity: 0;
         transform: translateX(-100px);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translate(0);
     }
 }
 
-@keyframes moverDerecha{
-    0%{
+@keyframes moverDerecha {
+    0% {
         opacity: 0;
         transform: translateX(100px);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translate(0);
     }
 }
 
-@keyframes arriba{
-    0%{
+@keyframes arriba {
+    0% {
         opacity: 0;
         transform: translateY(100px);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translate(0);
     }
