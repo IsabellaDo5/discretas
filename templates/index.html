@@ -3,6 +3,149 @@
 {% block title %}Inicio{% endblock %}
 
 {% block main %}
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error neque at commodi minus dolorum. Hic eos deserunt laborum, dolor nulla qui odit omnis neque unde obcaecati. Maxime ut placeat sint!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus unde corrupti expedita temporibus, molestiae tenetur harum amet consequatur laboriosam quaerat consequuntur modi dolorem magni commodi minima eum placeat vel est.</p>
+
+<!-- Aqui esta la decoracion de la entrada principal-->
+<header class="moverxd">
+    <div class="container6">
+        <div class="textos">
+            <h1>MINED 2.0</h1>
+            <a href="#oli" style="width: 180px; background-color: #06283D;">Comenzar</a>
+        </div>
+        <img class="fotico" src="/static/pics/2.png" alt="#">
+    </div>
+</header>
+<!-- Este es el div que esta abajo aqui podes cambiar el color -->
+<div class="wave">
+    <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+            style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill:  #e71f1f;"></path>
+        </svg></div>
+</div>
+
+<!-- El 70% de mi proyecto esta aqui, POPUP AQUI -->
+<div class="popup">
+    <button id="close">&times;</button>
+    <h2>Bienvenido {{nombre}} </h2>
+    <img class = "pop" src="/static/pics/bienvenida.png" alt="">
+    <p>
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem iusto laudantium natus n
+    </p>
+    
+</div>
+
+<!-- Aqui estan las card de los anios -->
+<div class="libro" style="background-color:  #3baaaa;">
+    <div class="title">
+        <h2>Años</h2>
+    </div>
+
+
+    <div class="box">
+        <div class="card">
+            <img class = "pop" src="/static/pics/septimo.png" alt="" style="margin-left:60px;">
+            <h5>Septimo año</h5>
+            <div class="pra">
+                <p style="color: White;">ESTE AÑO LO ODIE
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquam placeat consequatur iusto f.</p>
+
+                <p style="text-align: center;">
+                    <a class="button" href=" #" target="_blank" style="margin-top: 60px;">leer
+                        mas</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class = "pop" src="/static/pics/octavo.png" alt="" style="margin-left:60px;">
+            <h5>Octavo año</h5>
+            <div class="pra">
+                <p style="color: White;">AQUI ME ENFERME
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquam placeat consequatur iusto f. </p>
+                <a class="button" href="#" style="margin-top: 60px;" target="_blank">leer mas
+                </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class = "pop " src="/static/pics/noveno.png" alt="" style="margin-left:60px;">
+            <h5>Noveno año</h5>
+            <div class="pra">
+                <p style="color: White;">MI PRIMER JAÑITA
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquam placeat consequatur iusto f.</p>
+               
+                <a class="button" href="#" target="_blank">leer mas</a>
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <section class="wow slideInLeft ">
+
+        <div class="box">
+            <div class="card">
+                <img class = "pop" src="/static/pics/decimo.png " alt="" style="margin-left:60px;">
+                <h5>Decimo año</h5>
+                <div class="pra">
+                    <p style="color: White;">AQUI TUVE TRES JAÑAS
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquam placeat consequatur iusto f.</p>
+
+                    <p style="text-align: center;">
+                        <a class="button" href="#" target="_blank" style="margin-top: 60px;">leer
+                            mas</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/static/pics/hea.svg" alt="" style="height:60px;">
+                <h5>Undecimo año</h5>
+                <div class="pra">
+                    <p style="color: White;">................................................</p>
+                    <a class="button" href="https://ethereum.org/en/" style="margin-top: 60px;" target="_blank">leer
+                        mas</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/static/pics/tehther.svg" alt="" style="height:50px;">
+                <h5>Pre-Universitario</h5>
+                <div class="pra">
+                    <p style="color: White;">............</p>
+                    <p style=" margin-top: 50px;"></p>
+                    <a class="button" href="https://tether.to/" target="_blank">leer mas</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+ <!--Script de popup-->
+ <script type="text/javascript">
+    window.addEventListener("load", function () {
+        setTimeout(
+            function open(event) {
+                document.querySelector(".popup").style.display = "block";
+            },
+            2000
+        )
+    });
+
+
+    document.querySelector("#close").addEventListener("click", function () {
+        document.querySelector(".popup").style.display = "none";
+    });
+</script>
+
+
+
+
 {% endblock %}

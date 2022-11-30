@@ -55,6 +55,7 @@ def login_required(f):
 @app.route("/")
 @login_required
 def inicio():
+    
     try:
         a = session["user_id"]
     except:
@@ -66,6 +67,7 @@ def login():
     #Aqui le pasamos la dirrecion de la imagen a esta variable
     #Flask es un despelote
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'], 'login.png')
+  
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
@@ -85,14 +87,16 @@ def login():
             return render_template("login.html",user_image=pic1)
 
         session["user_id"] = user[0]["id"]
+        
         id_user = session["user_id"]
-        return render_template("index.html", user_image=pic1)
+        return render_template("index.html", user_image=pic1, nombre = username)
     else:    
         return render_template("login.html",user_image=pic1)
 
 @app.route("/register", methods=["GET","POST"])
 def register():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'], 'register.svg')
+   
     if request.method == "POST":
 
         username = request.form.get("username")

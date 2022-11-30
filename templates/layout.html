@@ -9,6 +9,13 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link href="{{ url_for('static',filename='styles.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=AveriaLibre">
+
+  <!-- AQUI ESTA LA ANIMACION NO TOCAR PORQUE SE JODE TODO-->
+  <link rel="stylesheet" href="/static/animate.css">
+    <script src="/static/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </head>
 
 <body>
@@ -39,6 +46,10 @@
             {% if session.user_id %}
             <!--Aqui puse el buscador ya que pensaba que solamente los usuarios logeados iban a poder usarlo
             , sino es asi ahi lo pongo mas tarde a como estaba, me duele el culo ya-->
+            <li class="nav-item">
+              <h3> <img  class = "usuario" src="/static/pics/usuario.png" alt="#">{{nombre}}</h3>
+            </li>
+
             <li class="nav-item">
               <form class="d-flex mt-3" role="search">
                 <input class="form-control me-2" type="search" placeholder="Buscar un tema, libro" aria-label="Search"
